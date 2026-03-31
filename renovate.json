@@ -1,0 +1,25 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "rangeStrategy": "bump",
+  "packageRules": [
+    {
+      "matchManagers": [
+        "dockerfile",
+        "github-actions"
+      ],
+      "groupName": "container and workflow dependencies"
+    },
+    {
+      "matchManagers": [
+        "npm"
+      ],
+      "groupName": "node dependencies"
+    }
+  ]
+}
