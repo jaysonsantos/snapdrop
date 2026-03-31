@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bash
 # shellcheck shell=bash
 
-cd /app/www/server || exit 1
+cd /app/www || exit 1
 
-exec s6-setuidgid abc /usr/bin/node index.js
+exec s6-setuidgid abc /usr/local/bin/bun server/index.js
