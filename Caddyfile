@@ -1,0 +1,13 @@
+{
+	auto_https off
+	admin off
+}
+
+http://:2024 {
+	root * /app/www/client
+	file_server
+
+	handle /server* {
+		reverse_proxy 127.0.0.1:3000
+	}
+}
